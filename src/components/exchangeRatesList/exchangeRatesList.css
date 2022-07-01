@@ -1,0 +1,57 @@
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+  border-collapse: collapse;
+  font-size: 1.1em;
+}
+
+tbody{
+  margin-top: 1.5em;
+}
+
+thead{
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+thead th {
+	font-weight: bold;
+	border: none;
+	padding: 0.3em;
+  background-color: rgba(163, 207, 192, 0.5);
+}
+
+table tbody tr:hover {
+	font-weight: bold;
+	border: 0.1em solid rgba(0, 0, 0, 0.541);
+	background-color: rgb(202, 233, 233);
+}
+
+tbody td {
+  width: 15em;
+  text-align: center;
+  border: none;
+  padding: 0.4em;
+}
+
+tbody tr:nth-child(even){
+	background-color: inherit;
+}
+
+tbody tr:nth-child(odd){
+	background: #babfc12e;
+}
+
+.base-currency {
+  padding: 0.3em;
+  margin: 0.1em;
+  width: 10em;
+	border: none;
+	outline: none;
+  text-align: center;
+  background-color: rgb(156, 201, 185);
+}

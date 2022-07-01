@@ -1,0 +1,50 @@
+.currency-converter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  grid-gap: 5px;
+  padding: 1em 2em;
+  height: 29em;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  font-size: 2em;
+  padding: 0.3em;
+  width: 100%;
+}
+
+.currency-converter div {
+  width: 100%;
+}
+
+select {
+  font-size: 2em;
+  padding: 0.3em;
+  width: 100%;
+}
+
+.swap-button {
+  font-size: 2.5em;
+  border: none;
+  background-color: inherit;
+  margin-right: 0.4em;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: auto;
+}
+
+.swap-button:hover {
+  background-color: rgba(230, 239, 235, 0.6);
+}
+
+.target-currency-amount {
+  outline:none;
+}
