@@ -20,12 +20,12 @@ export class ExchangeRatesList extends Component {
     this.#exchangeRatesList = thisComponent.querySelector('tbody');
 
     fillInSelectWithCurrencyNames(this.#baseCurrencySelect, 'USD');
-    this.fillInExchangeRatesList();
+    this.#fillInExchangeRatesList();
 
-    this.#baseCurrencySelect.addEventListener("change", () => this.updateRatesList());
+    this.#baseCurrencySelect.addEventListener("change", () => this.#updateRatesList());
   }
 
-  fillInExchangeRatesList() {
+  #fillInExchangeRatesList() {
     const baseCurrency = this.#baseCurrencySelect.value;
     const baseCurrencyRate = exchangeRates[baseCurrency];
    
@@ -35,12 +35,12 @@ export class ExchangeRatesList extends Component {
       const baseCurrencyCell = row.insertCell(1);
       const sourceCurrencyRate = exchangeRates[name];
 
-      sourceCurrencyCell.innerHTML = '1       ' + name + '        =';
+      sourceCurrencyCell.innerHTML = '1 ' + name + ' =';
       baseCurrencyCell.innerHTML = convertCurency(1, sourceCurrencyRate, baseCurrencyRate).toFixed(5);
     })
   }
 
-  updateRatesList() {
+  #updateRatesList() {
     const exchangeRatesListRows = this.#exchangeRatesList.rows;
     const baseCurrency = this.#baseCurrencySelect.value;
     const baseCurrencyRate = exchangeRates[baseCurrency];

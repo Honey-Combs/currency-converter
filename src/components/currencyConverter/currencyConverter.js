@@ -16,7 +16,7 @@ export class CurrencyConverter extends Component {
     this.componentName = 'currency-converter';
   }
 
-  displayСconversionResult() {
+  #displayСconversionResult() {
     const sourceCurrencyAmount = this.#amountInputField.value;
     const sourceCurrencyRate = exchangeRates[this.#sourceCurrencySelect.value];
     const targetCurrencyRate = exchangeRates[this.#targetCurrencySelect.value];
@@ -34,8 +34,8 @@ export class CurrencyConverter extends Component {
     fillInSelectWithCurrencyNames(this.#sourceCurrencySelect, 'USD');
     fillInSelectWithCurrencyNames(this.#targetCurrencySelect, 'EUR');
 
-    this.#amountInputField.addEventListener("input", () => this.displayСconversionResult());
-    this.#sourceCurrencySelect.addEventListener("change", () => this.displayСconversionResult());
-    this.#targetCurrencySelect.addEventListener("change", () => this.displayСconversionResult());
+    this.#amountInputField.addEventListener("input", () => this.#displayСconversionResult());
+    this.#sourceCurrencySelect.addEventListener("change", () => this.#displayСconversionResult());
+    this.#targetCurrencySelect.addEventListener("change", () => this.#displayСconversionResult());
   }
 }
